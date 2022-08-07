@@ -1,5 +1,5 @@
 body{
-    background-color:black;
+    background-color: rgba(255, 55, 98, 0.117);
 }
 h1{
     color:white;
@@ -26,7 +26,7 @@ nav ul li{
     padding: 1px;
     border:1px solid rgba(255, 55, 98, 0.117);
 }
-.container{
+.background{
     margin: 30px;
     background-image:url(https://i.pinimg.com/474x/26/59/88/265988df777bac5ab0c572989096a8c0.jpg);
     height:100%;

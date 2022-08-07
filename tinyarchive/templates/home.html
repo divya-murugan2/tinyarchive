@@ -1,17 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="page_title">
-   <h1> The Tiny Library </h1>
+<div class="home_header" style="text-align:center;">
+    <div class="page_title">
+        <h1> The Tiny Library </h1>
+    </div>
+    <div class="intro">
+        <p>We are happy to meet you! We are small, but still growing.</p>
+    </div>
 </div>
-<div class="intro">
-    We are happy to meet you! We are small, but still growing.
+<div class= home_body style="text-align:center;">
+    <ul>
+        <li><a href="archive/">Archives</a> </li>
+        <li> <a href="exhibit/"> Exhibits </a></li>
+        <li> About Us </li>
+       <!--<li> <a href="about_us/"> About Us </a></li>-->
+    </ul>
 </div>
-<ul>
-    <li><a href="archive/">Archives</a> </li>
-    <li> <a href="exhibit/"> Exhibits </a></li>
-    <li> About Us </li>
-    <!--<li> <a href="about_us/"> About Us </a></li>-->
-</ul>
 
 {% endblock %}
