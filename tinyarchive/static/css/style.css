@@ -6,9 +6,10 @@
 
 body {
     background-color: rgba(255, 55, 98, 0.117);
+    text-align: center;
 }
 
-h1 {
+h1, .page_title {
     color:white;
     font-size: 36pt;
 }
@@ -34,6 +35,10 @@ nav ul li {
     margin:50px;
     padding: 1px;
     border:1px solid rgba(255, 55, 98, 0.117);
+}
+
+a {
+    text-align: center;
 }
 
 .background-violet {
@@ -105,9 +110,24 @@ nav ul li {
     text-align: center;
     border: none;
     border-radius: 0.4rem;
+    background-color: white;
     transition: 0.2s;
     cursor: pointer;
     letter-spacing: 0.1rem;
+}
+
+.home-btn {
+    display: block;
+    width: 20%;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: white;
+    transition: 0.2s;
+    cursor: pointer;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 60em) {
