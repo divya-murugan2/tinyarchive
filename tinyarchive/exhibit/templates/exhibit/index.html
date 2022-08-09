@@ -2,20 +2,32 @@
 {% load static %}
 {% block content %}
 <div class="breadcrumb">
-    <a href="/"> Tiny Library </a>
+    <a href="/" class="home-btn"> Home </a>
 </div>
 <div class="page_title">
     Exhibits
 </div>
 <div class="content">
     {% if exhibits %}
-    <ul>
-        {% for exhibit in exhibits %}
-        <li>
-            <div class="exhibit"><a href="{{exhibit.id}}">{{exhibit.name}} </a> : {{exhibit.snippet}} </div>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class= home_body style="text-align:center;">
+        <div class="grid">
+            {% for exhibit in exhibits %}
+            <div class="grid-item exhibit">
+                <a href="{{exhibit.id}}">
+                    <div class="card">
+                        <div class="card-content">
+                            <h1 class="card-header">{{exhibit.name}}</h1>
+                            <p class="card-text">
+                                {{exhibit.snippet}}
+                            </p>
+                            <button class="card-btn">Click for more!</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
     {% else %}
     <p>No exhibits yet!</p>
     {% endif %}

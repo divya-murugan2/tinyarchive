@@ -2,38 +2,40 @@
 {% load static %}
 {% block content %}
 <div class="breadcrumb">
-    <a href="/"> Tiny Library  </a>
+    <a href="/" class="home-btn"> Home </a>
 </div>
 <div class="page_title">
-    The Archive
+    <h1>The Archive</h1>
 </div>
-
 
 <div class="content">
     {% if archive_items %}
-    <table>
-        <thead>
-            <th> Preview </th>
-            <th> Name </th>
-            <th> Description </th>
-        </thead>
-        <tbody>
+    <div class= home_body style="text-align:center;">
+        <div class="grid">
             {% for item in archive_items %}
-            <tr>
+            <div class="grid-item">
                 {% if item.thumbnail %}
-                    <td><a href="{{item.id}}"><img src="{% get_media_prefix %}{{item.thumbnail}}"></td>
+                <a href="{{item.id}}"><img src="{% get_media_prefix %}{{item.thumbnail}}">
                 {% else %}
-                    <td></td>
                 {% endif %}
-                <td><a href="{{item.id}}">{{item.name}}</a></td>
-                <td>{{item.description}}</td>
-            </tr>
+                    <div class="card">
+                        <div class="card-content">
+                            <h1 class="card-header">{{item.name}}</h1>
+                            <p class="card-text">
+                                {{item.description}}
+                            </p>
+                            <button class="card-btn">Click for more!</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
             {% endfor %}
-        </tbody>
-    </table>
+        </div>
+    </div>
     {% else %}
     <p>No items in the archive yet!</p>
     {% endif %}
 </div>
 
 {% endblock %}
+
