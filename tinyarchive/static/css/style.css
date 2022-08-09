@@ -1,33 +1,120 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+body {
     background-color: rgba(255, 55, 98, 0.117);
 }
-h1{
+
+h1 {
     color:white;
     font-size: 36pt;
 }
-p em{
+
+p em {
     color:rgb(245, 255, 177);
     font-weight: bold;
 }
-p{
+
+p {
     color:white;
 }
-.background-violet{
-    background-color: rgba(255, 55, 98, 0.117); 
-}
-ul{
+
+ul {
     color:rgba(235, 210, 47, 0.865);
 }
-nav ul{
+
+nav ul {
     display: flex;
     list-style: none }
-nav ul li{
+
+nav ul li {
     margin:50px;
     padding: 1px;
     border:1px solid rgba(255, 55, 98, 0.117);
 }
-.background{
+
+.background-violet {
+    background-color: rgba(255, 55, 98, 0.117); 
+}
+
+.background {
     margin: 30px;
     background-image:url(https://i.pinimg.com/474x/26/59/88/265988df777bac5ab0c572989096a8c0.jpg);
     height:100%;
+}
+
+.intro {
+    margin: 5%; 
+}
+
+.grid {
+    margin-top: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    align-items: start;
+}
+
+.grid-item {
+    border-style: groove;
+    border-color: black;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6 rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5); 
+}
+
+.card-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-header {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 60em) {
+    body {
+        padding: 3rem;
+    }
+    .grid {
+        grid-gap: 3rem;
+    }
 }
