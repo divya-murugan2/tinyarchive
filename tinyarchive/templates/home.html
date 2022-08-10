@@ -1,17 +1,62 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="page_title">
-   <h1> The Tiny Library </h1>
+<div class="home_header" style="text-align:center;">
+    <div class="page_title">
+        Starbucks Mugs Around The World
+    </div>
+    <div class="intro">
+        <p>We are happy to meet you! We are small, but still growing.</p>
+    </div>
 </div>
-<div class="intro">
-    We are happy to meet you! We are small, but still growing.
+<div class= home_body style="text-align:center;">
+    <div class="grid">
+        <div class="grid-item">
+            <a href="archive/">
+                <div class="card">
+                    <div class="card-content">
+                        <h1 class="card-header">Archive</h1>
+                        <p class="card-text">
+                            Collection
+                        </p>
+                        <button class="card-btn">Look Through Our Artifacts!</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="exhibit/">
+                <div class="card">
+                    <div class="card-content">
+                        <h1 class="card-header">Exhibit</h1>
+                        <p class="card-text">
+                            Stories
+                        </p>
+                        <button class="card-btn">Click to Enter!</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="about/">
+                <div class="card">
+                    <div class="card-content">
+                        <h1 class="card-header">About Us</h1>
+                        <p class="card-text">
+                            Group XII
+                        </p>
+                        <button class="card-btn">Meet Our Team!</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- <ul>
+        <li><a href="archive/">Archives</a> </li>
+        <li> <a href="exhibit/"> Exhibits </a></li>
+        <li> About Us </li>
+        <li> <a href="about_us/"> About Us </a></li>
+    </ul> -->
 </div>
-<ul>
-    <li><a href="archive/">Archives</a> </li>
-    <li> <a href="exhibit/"> Exhibits </a></li>
-    <li> About Us </li>
-    <!--<li> <a href="about_us/"> About Us </a></li>-->
-</ul>
 
 {% endblock %}
