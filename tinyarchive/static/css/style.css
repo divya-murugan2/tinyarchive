@@ -1,33 +1,143 @@
-body{
-    background-color:black;
+* {
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
-h1{
-    color:white;
+
+body {
+    background-color: rgba(255, 55, 98, 0.117);
+    text-align: center;
+    font-weight: 900
+}
+
+h1, .page_title {
+    color:rgb(81, 57, 81);
     font-size: 36pt;
+    margin: 50px;
+    padding: 20px;
 }
-p em{
+
+p em {
     color:rgb(245, 255, 177);
     font-weight: bold;
 }
-p{
-    color:white;
+
+p {
+    color:rgb(160, 92, 160);
 }
-.background-violet{
-    background-color: rgba(255, 55, 98, 0.117); 
+
+ul {
+    color:rgb(160, 92, 160);
 }
-ul{
-    color:rgba(235, 210, 47, 0.865);
-}
-nav ul{
+
+nav ul {
     display: flex;
     list-style: none }
-nav ul li{
+
+nav ul li {
     margin:50px;
     padding: 1px;
     border:1px solid rgba(255, 55, 98, 0.117);
 }
-.container{
+
+a {
+    text-align: center;
+}
+
+.background-violet {
+    background-color: rgba(255, 55, 98, 0.117); 
+}
+
+.background {
     margin: 30px;
-    background-image:url(https://i.pinimg.com/474x/26/59/88/265988df777bac5ab0c572989096a8c0.jpg);
+    background-image:url(https://i.pinimg.com/564x/d8/6f/54/d86f54dcd386f2c35558c487d726a9ce.jpg);
     height:100%;
+}
+
+.intro {
+    margin: 5%; 
+}
+
+.grid {
+    margin-top: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    align-items: start;
+}
+
+.grid-item {
+    border-style: groove;
+    border-color: black;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6 rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5); 
+}
+
+.card-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-header {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: white;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+
+.home-btn {
+    display: block;
+    width: 20%;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: white;
+    transition: 0.2s;
+    cursor: pointer;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 60em) {
+    body {
+        padding: 3rem;
+    }
+    .grid {
+        grid-gap: 3rem;
+    }
 }
