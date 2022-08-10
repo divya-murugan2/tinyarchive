@@ -7,11 +7,14 @@
 body {
     background-color: rgba(255, 55, 98, 0.117);
     text-align: center;
+    font-weight: 900
 }
 
 h1, .page_title {
-    color:white;
+    color:rgb(81, 57, 81);
     font-size: 36pt;
+    margin: 50px;
+    padding: 20px;
 }
 
 p em {
@@ -20,11 +23,11 @@ p em {
 }
 
 p {
-    color:white;
+    color:rgb(160, 92, 160);
 }
 
 ul {
-    color:rgba(235, 210, 47, 0.865);
+    color:rgb(160, 92, 160);
 }
 
 nav ul {
@@ -47,7 +50,7 @@ a {
 
 .background {
     margin: 30px;
-    background-image:url(https://i.pinimg.com/474x/26/59/88/265988df777bac5ab0c572989096a8c0.jpg);
+    background-image:url(https://i.pinimg.com/564x/d8/6f/54/d86f54dcd386f2c35558c487d726a9ce.jpg);
     height:100%;
 }
 
