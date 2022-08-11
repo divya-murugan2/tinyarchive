@@ -11,19 +11,15 @@
     <div class="exhibit_items">
         <ul>
             {% for item in exhibit_items %}
-            <li>
                 <div class="exhibit_item">
+                    {% if item.image %}
+                    <img src="{% get_media_prefix %}{{ item.picture }}"  alt="{{ item.name }} pic" style="text-align:center">
+                    {% endif %}
                     <ul>
-                        {% if item.image %}
-                        <a href="/archive/{{item.id}}"><img src="{% get_media_prefix %}{{item.image}}" /></a>
-                        {% endif %}
                         <li>Link to Archive: <a href="/archive/{{item.id}}">{{item.name}}</a></li>
-                        <li>Short Description: {{item.short_description}}</li>
-                        <br> 
                         <li style="text-align: left; color: black;"> About: <br> {{exhibit_text}}</li>
                     </ul>
                 </div>
-            </li>
             {% endfor %}
         </ul>
     </div>
