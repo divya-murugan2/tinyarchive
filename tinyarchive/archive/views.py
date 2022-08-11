@@ -24,7 +24,6 @@ def index(request):
                 "id": item.id,
                 "thumbnail": thumb,
                 "name": item.name,
-                "description": item.description,
             }
 
             items_to_list.append(archive_item_info)
