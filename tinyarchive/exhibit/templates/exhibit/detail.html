@@ -13,7 +13,7 @@
             {% for item in exhibit_items %}
                 <div class="exhibit_item">
                     {% if item.image %}
-                    <img src="{% get_media_prefix %}{{ item.picture }}"  alt="{{ item.name }} pic" style="text-align:center">
+                    <img src="{% get_media_prefix %}{{ item.image }}"  alt="{{ item.name }} pic" style="text-align:center">
                     {% endif %}
                     <ul>
                         <li>Link to Archive: <a href="/archive/{{item.id}}">{{item.name}}</a></li>
