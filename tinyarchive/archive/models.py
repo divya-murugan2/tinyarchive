@@ -79,13 +79,12 @@ class Document(ArchiveDocument):
 #adding a new model for mugs
 #inherits from ArchiveDocument
 class StarbucksMug(ArchiveDocument):
-    productionLocation = models.CharField(blank = True, max_length = 500) #where the mug was made
-    displayedLocation = models.CharField(blank = True, max_length = 500) #what location the mug shows
-    sizeOunces = models.IntegerField() #size in ounces
-    #date = models.CharField(blank = True, max_length = 500)
-    date = models.DateField(blank = True, auto_now=False, auto_now_add=False) #when it was made
-    subject = models.CharField(max_length = 500) #what does the mug depict
-    shapeDescription = models.TextField(null = False) #description of the mug shape
+    collection = models.CharField(blank = True, max_length = 500) #collection type
+    brand = models.CharField(max_length = 500)
+    location = models.CharField(max_length = 500, blank = True) #what location the mug represents
+    capacityInOunces = models.IntegerField() #size in ounces
+    year = models.IntegerField()
+    shapeDescription = models.TextField(blank = True, null = False) #description of the mug shape
     
     #color options
     COL_RED = 'red'
@@ -115,9 +114,5 @@ class StarbucksMug(ArchiveDocument):
     SEA_CHOICES = [(SEA_SUMMER, "Summer"), (SEA_FALL, "Fall"), (SEA_WINTER, "Winter"), (SEA_SPRING, "Spring"), (SEA_NONE, "None")]
     season = models.CharField(max_length = 500, choices = SEA_CHOICES, default = SEA_NONE)
     
-    holiday = models.CharField(blank = True, max_length = 500)
-    text = models.TextField(blank = True, null = False) #text on the mug
-    material = models.CharField(max_length = 500) #what the mug is made out of
-
-    productLink = models.URLField(max_length = 500) #link to website with prodcut
-    link3DModel = models.URLField(max_length = 500, blank = "True") #link to 3d model, if available
+    holiday = models.CharField(blank = True, null = False, max_length = 500) #what holiday the mug represents
+    material = models.CharField(null = False, max_length = 500) #what the mug is made out of
