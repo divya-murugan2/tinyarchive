@@ -75,19 +75,16 @@ def item_detail(request, item_id):
             context["item"]["3dmodel"] = archive_item.model3d
             template_to_render = "archive/item_artifact.html"
         elif isinstance(archive_item, StarbucksMug):
-            context["item"]["productionLocation"] = archive_item.productionLocation
-            context["item"]["displayedLocation"] = archive_item.displayedLocation
-            context["item"]["sizeOunces"] = archive_item.sizeOunces
-            context["item"]["date"] = archive_item.date
-            context["item"]["subject"] = archive_item.subject
+            context["item"]["collection"] = archive_item.collection
+            context["item"]["brand"] = archive_item.brand
+            context["item"]["location"] = archive_item.location
+            context["item"]["capacityInOunces"] = archive_item.capacityInOunces
+            context["item"]["year"] = archive_item.year
             context["item"]["shapeDescription"] = archive_item.shapeDescription
             context["item"]["color"] = archive_item.color
-            context["item"]["text"] = archive_item.text
             context["item"]["material"] = archive_item.material
             context["item"]["season"] = archive_item.season
             context["item"]["holiday"] = archive_item.holiday
-            context["item"]["productLink"] = archive_item.productLink
-            context["item"]["link3DModel"] = archive_item.link3DModel
             template_to_render = "archive/item_starbucksmug.html"
         else:
             context["item"]["transcription"] = archive_item.transcription
