@@ -6,5 +6,33 @@
     <a href="/" class="home-btn"> Home </a>
 </div>
 <div class="page_title">
-    {{item.name}}
+    <div class="image">
+        {% if item.pictures %}
+        <div class = "gallery"></div>
+        {% for pic in item.pictures %}
+            <a href="/archive/media/{{pic.id}}"> <img src="{% get_media_prefix %}{{ pic.picture }}" alt="{{ item.name }}"> </a>
+        {% endfor %}
+        </div>
+    {% endif %}
+    </div>
+    <div class="info">
+        <ul>
+            <li>Description: {{item.description}}</li>
+            <li>Shape Description: {{item.shapeDescription}}</li>
+            <li>Text on Object: {{item.text}}</li>
+            <li>Product Link: {{item.productLink}}</li>
+            <br> 
+            <li>Collection: {{item.collection}}</li>
+            <li>Year: {{item.year}}</li>
+            <li>Brand: {{item.brand}}</li>
+            <li>Location: {{item.location}}</li>
+            <br>
+            <li>Material: {{item.material}}</li>
+            <li>Color: {{item.color}}</li>
+            <li>Season: {{item.season}}</li>
+            <li>Holiday: {{item.holiday}}</li>
+            <li>Capacity in Ounces: {{item.capacityInOunces}}</li>
+        </ul>
+    </div>
+</div>
 {% endblock %}
