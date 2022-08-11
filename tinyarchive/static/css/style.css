@@ -11,16 +11,15 @@ body {
 
 }
 
-h1, .page_title {
-    color:rgb(81, 57, 81);
-    font-size: 36pt;
-    margin: 50px;
-}
-h1, .intro {
+h1 {
     color:rgb(81, 57, 81);
     font-size: 20pt;
-    margin: 1px;
-    border: width:10px; height: 200px;
+}
+
+.page_title {
+    color:rgb(81, 57, 81);
+    font-size: 36pt;
+    margin: 20px;
 }
 
 p em {
